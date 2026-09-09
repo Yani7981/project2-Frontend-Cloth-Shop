@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Z-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    </head>
+    <body>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing:border-box;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 18px;
+            }
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .header{
+                height: 80px;
+                width: 70%;
+                background-color:rgb(230, 18, 18);
+                border-radius: 3px;
+                margin: 30px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+            }
+            .header .logo{
+                font-size: 30px;
+                font-weight: bold;
+                color: white;
+            }
+            .cart{
+                display: flex;
+                background-color: white;
+                justify-content: space-between;
+                align-items: center;
+                padding: 7px 10px;
+                border-radius: 3px;
+                width: 80px;
+            }
+            .fa-solid{
+                color: goldenrod;
+
+            }
+            .cart p{
+                height: 22px;
+                width: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 22px;
+                background-color: goldenrod;
+                color: white;
+            }
+            .container{
+                display:flex;
+                width: 70%;
+                margin-bottom: 30px;
+            }
+            #root{
+                width: 60%;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 20px;
+            }
+            .sidebar{
+                width: 40%;
+                border-radius: 5px;
+                background-color: rgb(241, 234, 222);
+                margin-left: 20px;
+                padding: 15px;
+                text-align:end;
+            }
+            .head{
+                background-color: goldenrod;
+                border-radius: 3px;
+                height: 40px;
+                padding: 10px;
+                margin-bottom: 20px;
+                color: white;
+                display: flex;
+                align-items: center;
+            }
+            .foot{
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0px;
+                padding: 10px 0px;
+                border-top: 1px solid #333;
+            }
+        </style>
+        <div class="header">
+            <p class="logo">LOGO</p>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                   <h3>Total</h3>
+                   <h2 id="total">$0.00</h2>
+                </div>
+            </div>
+        </div>
+        <script src="additocart.js"></script>
+    </body>
+</html>
